@@ -37,27 +37,34 @@ The service:
 
 ## Installation
 
-### Step 1: Create Installation Directory
+### Step 1: Install Python Packages
+
+```bash
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip
+```
+
+### Step 2: Create Installation Directory
 
 ```bash
 sudo mkdir -p /opt/enhance-log-mirror
 cd /opt/enhance-log-mirror
 ```
 
-### Step 2: Set Up Python Virtual Environment
+### Step 3: Set Up Python Virtual Environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Step 3: Install Dependencies
+### Step 4: Install Dependencies
 
 ```bash
 pip install aiofiles watchdog
 ```
 
-### Step 4: Install the Application
+### Step 5: Install the Application
 
 Copy the `app.py` script to `/opt/enhance-log-mirror/app.py`:
 
@@ -70,7 +77,7 @@ sudo nano /opt/enhance-log-mirror/app.py
 sudo chmod +x /opt/enhance-log-mirror/app.py
 ```
 
-### Step 5: Create Systemd Service
+### Step 6: Create Systemd Service
 
 Create the systemd unit file:
 
@@ -105,7 +112,7 @@ WantedBy=multi-user.target
 
 Save and exit (Ctrl+X, Y, Enter).
 
-### Step 6: Enable and Start the Service
+### Step 7: Enable and Start the Service
 
 ```bash
 # Reload systemd to recognize the new service
