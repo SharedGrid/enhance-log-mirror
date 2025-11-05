@@ -11,9 +11,7 @@ Enhance log mirroring service that continuously tails web server logs from Enhan
 
 ## Requirements
 
-- **OS**: Linux (tested on Ubuntu 24.04)
 - **Python**: 3.8 or higher
-- **Permissions**: Root access (required for chown operations)
 - **Dependencies**:
   - `aiofiles` - Asynchronous file operations
   - `watchdog` - File system monitoring
